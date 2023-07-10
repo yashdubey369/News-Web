@@ -1,0 +1,115 @@
+#container{
+    height:auto;
+    width: auto;
+    display: flex;
+    /* flex-direction: column; */
+    /* justify-content: space-between;
+    align-items:center ;
+    overflow-y:hidden;
+    gap: 5px;  */
+    flex-wrap:wrap;
+    overflow-y: auto;
+    justify-content:center; 
+    /* grid-auto-flow: dense; */
+     
+}
+.articles{
+    height: 18em;
+    /* width:  calc(15em-20px); */
+    width: 14em;
+    margin: 10px;
+    border-radius: 20px;
+    border-color: black;
+    border-style: groove;
+    border-width: 5px;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+    font-size: small;
+    cursor: pointer;
+    transition: transform 0.4s ease-out;
+
+}
+.articles:hover{
+    transform:scaleY(1.1) ;
+}
+.hover-underline-animation {
+    margin: 8px;
+    display: -webkit-box;
+    max-width: 400px;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+      text-decoration:none !important;
+  /* display: inline-block; */
+   font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 600;
+    font-size: 95%;
+    height: 20%;
+
+  margin: 8px;
+  position: relative;
+  color: #000000;
+}
+
+.hover-underline-animation::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000000;
+  transform-origin: bottom right;
+  transition: transform 0.5s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+  transform: scaleX(1.09);
+  transform-origin: bottom left;
+}
+img{
+    /* border-radius: 20px; */
+    position: relative;
+    overflow: hidden;
+    /* top: 2px; */
+    height: 100%;
+    aspect-ratio: 1;
+}
+.navbar {
+  justify-content: space-around;
+}
+
+.navbar-nav{
+  color: #fff;
+  transition: color 0.3s;
+}
+.navbar-brand {
+  color: #fff;
+}
+
+.navbar-dark .nav-link {
+  color: #ffffff;
+}
+.nav-link:hover  {
+  color: rgb(255, 166, 0);
+  font-weight: 400
+}
+@media only screen and (max-width:767px){
+  .articles{
+    width: 30em;
+    height:60em ;
+    margin: 3em 0px;
+  }
+  .hover-underline-animation{
+    font-size: 2em;;
+    height: 17%;
+    -webkit-line-clamp: 3;
+  }
+  .hover-underline-animation:hover::after{
+    transform: scale(1.05);
+  }
+}
