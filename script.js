@@ -1,4 +1,4 @@
-let p=fetch('https://newsapi.in/v2/everything?q=keyword&apiKey=78a14a144c6e4fab977cc5b55711da5d')
+let p=fetch('https://newsapi.org/v2/everything?q=keyword&apiKey=78a14a144c6e4fab977cc5b55711da5d')
 .then((response)=>{
     // console.log(response.json());
     return response.json();
